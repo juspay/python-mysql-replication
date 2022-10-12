@@ -34,12 +34,12 @@ class TestCommand(Command):
         unittest.main(tests, argv=sys.argv[:1])
 
 
-version = "0.30"
+version = "0.0.1"
 
 setup(
-    name="mysql-replication",
+    name="juspay-python-mysql-replication",
     version=version,
-    url="https://github.com/noplay/python-mysql-replication",
+    url="https://github.com/juspay/python-mysql-replication",
     author="Julien Duponchelle",
     author_email="julien@duponchelle.info",
     description=("Pure Python Implementation of MySQL replication protocol "
@@ -50,5 +50,5 @@ setup(
               "pymysqlreplication.tests"],
     cmdclass={"test": TestCommand},
     extras_require={'test': tests_require},
-    install_requires=['pymysql>=0.10'],
+    install_requires=['pymysql==1.0.2'],
 )
